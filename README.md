@@ -8,27 +8,27 @@ Feel free to contact me if you have any comments or suggestions.
 1. Get data from quandl  
 2. Features set = \[*'Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'*\] (default feature set)  
 3. Processing on time-series data  
-  a). *window length(window_len): append window_len days's historical feature set*  
-  b). *label: prediction length(pred_len): predict the moving average close price for pred_len days later*  
-  c). *known lately length(known_lately_len): To do validation*  
-4. Divied time-series data to three parts: df, df_known_lately, df_lately  
+  a). window length(*window_len*): append window_len days's historical feature set  
+  b). label: prediction length(*pred_len*): predict the moving average close price for pred_len days later  
+  c). known lately length(*known_lately_len*): To do validation  
+4. Divied time-series data into three parts: *df, df_known_lately, df_lately*  
   
 ## Preprocessing 
 1. dive the data for each row into price and volume.  
 2. Do standard normalization for price and volume.  
-   *Here is an assumption: if winodw_len is large enough, it will be a Gaussian Distribution. Normalize to zero mean and unit variance.*  
+   **Here is an assumption: if winodw_len is large enough, it will be a Gaussian Distribution. Normalize to zero mean and unit variance.**  
 3. Normalization for row data but need to do some data reshape  
-   *use sklearn preprocessing.StandardScaler()*  
+   **use sklearn preprocessing.StandardScaler()**  
 4. Rearrange to original format  
 5. Save the scaler_price (it will be need when do the inverse transformation later)  
-6. *df -> X, y (for train and test)  
-   df_known_lately -> X_known_lately, y_known_lately (for evaluate the model)  
-   df_lately -> X_lately*  
+6. *df -> X, y* (for train and test)  
+   *df_known_lately -> X_known_lately, y_known_lately* (for evaluate the model)  
+   *df_lately -> X_lately*  
   
 ## Cross validation    
-*split (X, y) into (X_train, y_train) + (X_test, y_test)  
-(X_train, y_train) is for training the LSTM model.  
-(X_test, y_test) is for test later.*  
+- split *(X, y)* into *(X_train, y_train) + (X_test, y_test)*  
+- *(X_train, y_train)* is for training the LSTM model.  
+- *(X_test, y_test)* is for test later.  
   
 ## LSTM model    
 1. build LSTM model with input_dim = 5(ohlcv)  
@@ -37,15 +37,15 @@ Feel free to contact me if you have any comments or suggestions.
 4. loss = 'mse', optimization = 'rmsprop'  
   
 ## Prediction    
-1. df for training / test  
-2. df_known_lately - I used it to evaluate the model. Sometimes the model can get a good training/validation loss but could not achieve the same performance for df_known_lately  
-3. df_lately - Predict the future trend.  
+1. *df* for training / test  
+2. *df_known_lately* - I used it to evaluate the model. Sometimes the model can get a good training/validation loss but could not achieve the same performance for df_known_lately  
+3. *df_lately* - Predict the future trend.  
   
 ## Result & Performance    
 1. Training and validation loss for LSTM model  
-2. mse_test: validation on (X_test, y_test)  
-3. mse_known_lately: validation on (X_known_lately, y_known_lately)  
-4. if mse_test and mse_known_lately is close enough, (maybe) the model is good to predict for (X_lately).  
+2. mse_test: validation on (*X_test, y_test*)  
+3. mse_known_lately: validation on (*X_known_lately, y_known_lately*)  
+4. if mse_test and mse_known_lately is close enough, (maybe) the model is good to predict for (*X_lately*).  
   
 ***Training and validation loss for LSTM model***  
 ![alt tag](https://github.com/christsaizyt/US_Stock_Market_Prediction_by_Machine-Deep_Learning/blob/master/NDAQ_training_curve.png)  
