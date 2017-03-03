@@ -36,7 +36,7 @@ Feel free to contact me if you have any comments or suggestions.
 3. Output layer: activation = 'linear'   
 4. Loss = 'mse', optimization = 'rmsprop'  
   
-## Prediction    
+## Validation and prediction    
 1. *df* for training / test  
 2. *df_known_lately* - I used it to evaluate the model. Sometimes the model can get a good training/validation loss but could not achieve the same performance for df_known_lately  
 3. *df_lately* - Predict the future trend.  
