@@ -8,9 +8,9 @@ Feel free to contact me if you have any comments or suggestions.
 1. Get data from quandl  
 2. Features set = \[*'Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'*\] (default feature set)  
 3. Processing on time-series data  
-  a). window length(*window_len*): append window_len days's historical feature set  
-  b). label: prediction length(*pred_len*): predict the moving average close price for pred_len days later  
-  c). known lately length(*known_lately_len*): To do validation  
+  a). window length (*window_len*): append *window_len* days's historical feature set  
+  b). label: prediction length (*pred_len*): predict the moving average close price for *pred_len* days later  
+  c). known lately length (*known_lately_len*): To do validation  
 4. Divied time-series data into three parts: *df, df_known_lately, df_lately*  
   
 ## Preprocessing 
