@@ -4,15 +4,15 @@ Author: Chris Tsai
 E-mail: christsaizyt@gmail.com  
 Feel free to contact me if you have any comments or suggestions.  
   
-***Data***
-1. **Get data from [quandl]**  
-2. **Features set = \[*'Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'*\] (default feature set)**  
-3. **Processing on time-series data** (for exmaple: 2010/1/1 - 2017/3/1 => *X0, X1, X2, ..., Xn* for each *Xi = ['o', 'h', 'l', 'c', 'v']*)  
+# Data  
+1. Get data from [ quandl ]  
+2. Features set = \[*'Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'*\] (default feature set)  
+3. Processing on time-series data (for exmaple: 2010/1/1 - 2017/3/1 => *X0, X1, X2, ..., Xn* for each *Xi = ['o', 'h', 'l', 'c', 'v']*)  
   a). window length(window_len): append window_len days's historical feature set  
   b). label: prediction length(pred_len): predict the moving average close price for pred_len days later  
   c). known lately length(known_lately_len): To do validation  
    
-  **Divied time-series data to three parts: df, df_known_lately, df_lately**  
+  Divied time-series data to three parts: df, df_known_lately, df_lately  
   *window_len = 120, pred_len = 10, known_lately_len = 20* (in this setting we use 6 months data to predict the trend of 2 weeks later.)  
   Some assumption: 10(working days) = 2 week, today = 2017/3/1  
   Roughly describe time interval  
@@ -24,7 +24,7 @@ Feel free to contact me if you have any comments or suggestions.
     
   *df[i,:] = ['label','o_-120_d','h_-120_d','l_-120_d','c_-120_d','v_-120_d','o_-119_d','h_-119_d','l_-119_d','c_-119_d','v_-119_d',....  'o_-1_d','h_-1_d','l_-1_d','c_-1_d','v_-1_d','o_-0_d','h_-0_d','l_-0_d','c_-0_d','v_-0_d']*  
   
-**Preprocessing** 
+# Preprocessing 
 1. dive the data for each row into price and volume.  
   price: */['o_-120_d','h_-120_d','l_-120_d','c_-120_d','o_-119_d','h_-119_d','l_-119_d','c_-119_d',....,'o_-0_d','h_-0_d','l_-0_d','c_-0_d'/]*  
   volume: */['v_-120_d','v_-119_d',...,'v_-0_d'/]*  
