@@ -14,11 +14,11 @@ Feel free to contact me if you have any comments or suggestions.
 4. Divied time-series data into three parts: *df, df_known_lately, df_lately*  
   
 ## Preprocessing 
-1. dive the data for each row into price and volume.  
+1. Divide the data for each row into price and volume.  
 2. Do standard normalization for price and volume.  
-   **Here is an assumption: if winodw_len is large enough, it will be a Gaussian Distribution. Normalize to zero mean and unit variance.**  
+   *Here is an assumption: if winodw_len is large enough, it will be a Gaussian Distribution. Normalize to zero mean and unit variance.*  
 3. Normalization for row data but need to do some data reshape  
-   **use sklearn preprocessing.StandardScaler()**  
+   *use sklearn preprocessing.StandardScaler()*  
 4. Rearrange to original format  
 5. Save the scaler_price (it will be need when do the inverse transformation later)  
 6. *df -> X, y* (for train and test)  
@@ -26,15 +26,15 @@ Feel free to contact me if you have any comments or suggestions.
    *df_lately -> X_lately*  
   
 ## Cross validation    
-- split *(X, y)* into *(X_train, y_train) + (X_test, y_test)*  
+- Split *(X, y)* into *(X_train, y_train) + (X_test, y_test)*  
 - *(X_train, y_train)* is for training the LSTM model.  
 - *(X_test, y_test)* is for test later.  
   
 ## LSTM model    
-1. build LSTM model with input_dim = 5(ohlcv)  
+1. Build LSTM model with input_dim = 5(ohlcv)  
 2. Here I use two hidden layers [120, 60] with dropout = 0.5, activation = 'relu'  
-3. output layer: activation = 'linear'   
-4. loss = 'mse', optimization = 'rmsprop'  
+3. Output layer: activation = 'linear'   
+4. Loss = 'mse', optimization = 'rmsprop'  
   
 ## Prediction    
 1. *df* for training / test  
@@ -58,7 +58,7 @@ scaled data mse:  0.034219994264
 ############## validation on known lately data ##############   
 scaled data mse:  0.202054234164  
   
-***Prediction for X_lately***  
+***Prediction***  
 a_+10_d: actual 10 days moving avergae for 10 days later  
 p_+10_d: predict 10 days moving avergae for 10 days later  
 a_+10_d_diff: df['a_+10_d'] - df['close'] to see the future trend for 10 days later  
@@ -66,3 +66,6 @@ p_+10_d_diff: df['p_+10_d'] - df['close'] to see the future trend for 10 days la
   
 ![alt tag](https://github.com/christsaizyt/US_Stock_Market_Prediction_by_Machine-Deep_Learning/blob/master/NDAQ_predictions.png)  
 
+
+
+  
