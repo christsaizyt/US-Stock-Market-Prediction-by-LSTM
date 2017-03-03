@@ -1,13 +1,13 @@
-# US Stock Market Prediction by LSTM
+# US Stock Market Prediction by LSTM  
 
-Author: Chris Tsai,
-E-mail: christsaizyt@gmail.com
-Feel free to contact me if you have any comments or suggestions.
-
---------------- Data ---------------
-1. Get data from quandl
-2. Features set = ['Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'] (default feature set)
-3. Processing on time-series data
+Author: Chris Tsai,  
+E-mail: christsaizyt@gmail.com  
+Feel free to contact me if you have any comments or suggestions.  
+  
+--------------- Data ---------------  
+1. Get data from quandl  
+2. Features set = ['Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'] (default feature set)  
+3. Processing on time-series data  
   for exmaple: 2010/1/1 - 2017/3/1 => X0, X1, X2, ..., Xn for each Xi = ['o', 'h', 'l', 'c', 'v']
   a). window length(window_len): append window_len days's historical feature set
   b). label: prediction length(pred_len): predict the moving average close price for pred_len days later
