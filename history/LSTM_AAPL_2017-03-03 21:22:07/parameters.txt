@@ -1,0 +1,31 @@
+%%%%%%%%%% DUMP SP_Global_Paras %%%%%%%%%%
+name 	LSTM
+identify 	LSTM_AAPL_2017-03-03 21:22:07
+save_folder 	./history/LSTM_AAPL_2017-03-03 21:22:07/
+debug_load_data 	False
+debug_preproc_data 	False
+ticker 	AAPL
+features 	ohlcv
+window_len 	260
+pred_len 	20
+known_lately_len 	20
+preproc_scaler 	standard_scaler
+out_class_type 	regression
+out_type 	MA
+start_date 	2010-01-01
+end_date 	2017-03-03
+
+%%%%%%%%%% DUMP SP_RNN_LSTM_Paras %%%%%%%%%%
+debug_rnn_lstm 	False
+batch_size 	128
+epoch 	100
+validation_split 	0.1
+hidden_layers 	[120, 60, 30]
+dropout 	[0.7, 0.5, 0.3]
+activation 	['relu', 'relu', 'relu']
+out_layer 	1
+out_activation 	linear
+loss 	mse
+optimizer 	rmsprop
+0.0325807594044
+1.15937472154
