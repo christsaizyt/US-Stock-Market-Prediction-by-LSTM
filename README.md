@@ -8,7 +8,7 @@ Feel free to contact me if you have any comments or suggestions.
 1. Get data from quandl  
 2. Features set = \[*'Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'*\] (default feature set)  
 3. Processing on time-series data  
-  a). window length (*window_len*): append *window_len* days's historical feature set  
+  a). window length (*window_len*): append *window_len* days' historical feature set  
   b). label: prediction length (*pred_len*): predict the moving average close price for *pred_len* days later  
   c). known lately length (*known_lately_len*): To do validation  
 4. Divied time-series data into three parts: *df, df_known_lately, df_lately*  
@@ -17,10 +17,10 @@ Feel free to contact me if you have any comments or suggestions.
 1. Divide the data for each row into price and volume.  
 2. Do standard normalization for price and volume.  
    *Here is an assumption: if winodw_len is large enough, it will be a Gaussian Distribution. Normalize to zero mean and unit variance.*  
-3. Normalization for row data but need to do some data reshape  
+3. Normalization for row data and some data reshape  
    *use sklearn preprocessing.StandardScaler()*  
 4. Rearrange to original format  
-5. Save the scaler_price (it will be need when do the inverse transformation later)  
+5. Save the scaler_price (it is necessary while doing the inverse transformation later)  
 6. *df -> X, y* (for train and test)  
    *df_known_lately -> X_known_lately, y_known_lately* (for evaluate the model)  
    *df_lately -> X_lately*  
