@@ -42,6 +42,7 @@ Feel free to contact me if you have any comments or suggestions.
 2. Here I use two hidden layers *[120, 60]* with *dropout = 0.5*, *activation = 'relu'*  
 3. Output layer: *activation = 'linear'*  
 4. Loss = 'mse', *optimization = 'rmsprop'*  
+  
 ### classification  
 1. Build LSTM model with *input_dim = 5(ohlcv), output_dim = n_out_class*  
 2. Here I use two hidden layers *[120, 60]* with *dropout = 0.5*, *activation = 'relu'*  
