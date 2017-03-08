@@ -1,0 +1,30 @@
+%%%%%%%%%% DUMP SP_Global_Paras %%%%%%%%%%
+name 	lstm
+identify 	lstm_AAPL_2017-03-08 02:37:49
+save 	True
+save_folder 	./history/lstm_AAPL_2017-03-08 02:37:49_120_10_ohlcv_2010-01-01_2017-03-08_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/
+ticker 	AAPL
+features 	ohlcv
+window_len 	120
+pred_len 	10
+valid_len 	20
+preproc_scaler 	standard_scaler
+out_class_type 	regression
+out_type 	MA
+n_out_class 	5
+start_date 	2010-01-01
+end_date 	2017-03-08
+
+%%%%%%%%%% DUMP SP_RNN_LSTM_Paras %%%%%%%%%%
+batch_size 	128
+epoch 	150
+validation_split 	0.05
+hidden_layers 	[120, 60, 30]
+dropout 	[0.7, 0.5, 0.3]
+activation 	['relu', 'relu', 'relu']
+out_layer 	1
+out_activation 	linear
+loss 	mse
+optimizer 	rmsprop
+0.0404534724888
+2.01433882315

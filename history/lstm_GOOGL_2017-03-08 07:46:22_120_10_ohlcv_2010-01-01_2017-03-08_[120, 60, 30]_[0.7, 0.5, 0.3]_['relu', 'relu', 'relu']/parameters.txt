@@ -1,0 +1,30 @@
+%%%%%%%%%% DUMP SP_Global_Paras %%%%%%%%%%
+name 	lstm
+identify 	lstm_GOOGL_2017-03-08 07:46:22
+save 	True
+save_folder 	./history/lstm_GOOGL_2017-03-08 07:46:22_120_10_ohlcv_2010-01-01_2017-03-08_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/
+ticker 	GOOGL
+features 	ohlcv
+window_len 	120
+pred_len 	10
+valid_len 	20
+preproc_scaler 	standard_scaler
+out_class_type 	classification
+out_type 	MA
+n_out_class 	5
+start_date 	2010-01-01
+end_date 	2017-03-08
+
+%%%%%%%%%% DUMP SP_RNN_LSTM_Paras %%%%%%%%%%
+batch_size 	128
+epoch 	200
+validation_split 	0.05
+hidden_layers 	[120, 60, 30]
+dropout 	[0.7, 0.5, 0.3]
+activation 	['relu', 'relu', 'relu']
+out_layer 	5
+out_activation 	softmax
+loss 	categorical_crossentropy
+optimizer 	rmsprop
+0.0470654101727
+0.318582384642

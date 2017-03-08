@@ -11,21 +11,20 @@ class SP_Global_Paras(object):
         self._name = name
         self._identify = name + '_' + ticker + '_' + str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         self._save_folder = ''
-        
-        # ------------- DEBUG -------------
-        self._debug_load_data = False
-        self._debug_preproc_data = False
+        self._save = False
 
         # ------------- INPUT -------------
         self._ticker = ticker
         self._features = 'ohlcv'
         self._window_len = 120
-        self._pred_len = 20
-        self._known_lately_len = 0
+        self._pred_len = 10
+        self._valid_len = 20
         
         # ------------- OUTPUT -------------
         self._out_class_type = 'regression'
         self._out_type = 'MA'
+        self._n_out_class = 5
+        
         self._start_date = '2010-01-01'
         self._end_date = 'current'
         
@@ -36,17 +35,17 @@ class SP_Global_Paras(object):
         returnString = ('%%%%%%%%%% DUMP SP_Global_Paras %%%%%%%%%%\n' + 
                         'name \t' + str(self._name) + '\n' + 
                         'identify \t' + str(self._identify) + '\n' + 
+                        'save \t' + str(self._save) + '\n' + 
                         'save_folder \t' + str(self._save_folder) + '\n' + 
-                        'debug_load_data \t' + str(self._debug_load_data) + '\n' + 
-                        'debug_preproc_data \t' + str(self._debug_preproc_data) + '\n' + 
                         'ticker \t' + str(self._ticker) + '\n' +
                         'features \t' + str(self._features) + '\n' +
                         'window_len \t' + str(self._window_len) + '\n' +
                         'pred_len \t' + str(self._pred_len) + '\n' +
-                        'known_lately_len \t' + str(self._known_lately_len) + '\n' +
+                        'valid_len \t' + str(self._valid_len) + '\n' +
                         'preproc_scaler \t' + str(self._preproc_scaler) + '\n' +
                         'out_class_type \t' + str(self._out_class_type) + '\n' +
                         'out_type \t' + str(self._out_type) + '\n' +
+                        'n_out_class \t' + str(self._n_out_class) + '\n' +
                         'start_date \t' + str(self._start_date) + '\n')# +
                         #'end_date \t' + str(self._end_date) + '\n')
         if self._end_date == 'current':
@@ -70,18 +69,11 @@ class SP_Global_Paras(object):
         self._save_folder = value
         
     @property
-    def debug_load_data(self):
-        return self._debug_load_data
-    @debug_load_data.setter
-    def debug_load_data(self, value):
-        self._debug_load_data = value
-    
-    @property
-    def debug_preproc_data(self):
-        return self._debug_preproc_data
-    @debug_preproc_data.setter
-    def debug_preproc_data(self, value):
-        self._debug_preproc_data = value
+    def save(self):
+        return self._save
+    @save.setter
+    def save(self, value):
+        self._save = value
         
     @property
     def ticker(self):
@@ -112,11 +104,11 @@ class SP_Global_Paras(object):
         self._pred_len = value
         
     @property
-    def known_lately_len(self):
-        return self._known_lately_len
-    @known_lately_len.setter
-    def known_lately_len(self, value):
-        self._known_lately_len = value
+    def valid_len(self):
+        return self._valid_len
+    @valid_len.setter
+    def valid_len(self, value):
+        self._valid_len = value
         
     @property
     def preproc_scaler(self):
@@ -132,6 +124,13 @@ class SP_Global_Paras(object):
     def out_class_type(self, value):
         self._out_class_type = value
         
+    @property
+    def n_out_class(self):
+        return self._n_out_class
+    @n_out_class.setter
+    def n_out_class(self, value):
+        self._n_out_class = value
+    
     @property
     def out_type(self):
         return self._out_type
@@ -166,15 +165,12 @@ class SP_Global_Paras(object):
 # print (g_paras.__str__())
 
 
-# In[3]:
+# In[2]:
 
 class SP_RNN_LSTM_Paras(SP_Global_Paras):
     
     def __init__(self, name, ticker):
         super(SP_RNN_LSTM_Paras, self).__init__(name, ticker = ticker)
-        
-        # ------------- DEBUG -------------
-        self._debug_rnn_lstm = False
 
         # ------------- LSTM -------------
         self._batch_size = 128
@@ -193,7 +189,6 @@ class SP_RNN_LSTM_Paras(SP_Global_Paras):
     def __str__(self):
         returnString = (super(SP_RNN_LSTM_Paras, self).__str__() + '\n' +
                         '%%%%%%%%%% DUMP SP_RNN_LSTM_Paras %%%%%%%%%%\n' + 
-                        'debug_rnn_lstm \t' + str(self._debug_rnn_lstm) + '\n' +
                         'batch_size \t' + str(self._batch_size) + '\n' +
                         'epoch \t' + str(self._epoch) + '\n' +
                         'validation_split \t' + str(self._validation_split) + '\n' +
@@ -207,13 +202,6 @@ class SP_RNN_LSTM_Paras(SP_Global_Paras):
                         'optimizer \t' + str(self._model['optimizer']) + '\n'
                        )
         return returnString
-    
-    @property
-    def debug_rnn_lstm(self):
-        return self._debug_rnn_lstm
-    @debug_rnn_lstm.setter
-    def debug_rnn_lstm(self, value):
-        self._debug_rnn_lstm = value
         
     @property
     def batch_size(self):
