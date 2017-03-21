@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94ceaa54-cdb8-4fd9-9132-ac9b0d6ff0a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stock_Prediction_LSTM_Model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Stock_Prediction_Run_Lstm.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/AAPL_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/AMZN_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/FB_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/GOOGL_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/MSFT_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/NDAQ_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/NVR_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/SEB_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/YELP_reg.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/predictions/YHOO_reg.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stock_Prediction_Global_Parameters.py" afterPath="$PROJECT_DIR$/Stock_Prediction_Global_Parameters.py" />
-    </list>
+    <list default="true" id="94ceaa54-cdb8-4fd9-9132-ac9b0d6ff0a0" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +31,8 @@
       <file leaf-file-name="Stock_Prediction_LSTM_Statefulness_Run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Stock_Prediction_LSTM_Statefulness_Run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -440,8 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Stock_Prediction_LSTM_Statefulness_Run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
