@@ -23,6 +23,7 @@ Using *window_len* days' historical features set to predict *pred_len* days late
 - *window_len*: append *windw_len* days' historical features set  
 - *pred_len*: predict the moving average(or close price) for *pred_len* days later  
 - *valid_len*: To do validation.   
+  
 **Data frame**  
 - Divided time-series data into three parts: *df, df_valid, df_lately*  
   a). *df -> X, y* (with label, for train and test)  
@@ -53,6 +54,7 @@ Using *window_len* days' historical features set to predict *pred_len* days late
 ## LSTM model  
 *[samples, time steps, features] = [how_many_data_u_have, window_len, n_feature_set]*  
 *Be care of the return_sequences*   
+  
 **Regression**  
 1. Build LSTM model with *input_dim = 5(ohlcv)*  
 2. Here I use two hidden layers *[120, 60]* with *dropout = 0.5*, *activation = 'relu'*  
