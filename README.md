@@ -15,14 +15,14 @@ In my work, I used two ways to do the predictions. One is statefulness LSTM mode
 ## Input  
 1. Get data from quandl (wiki database)  
 2. Features set = \[*'Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'*\] (default feature set)  
-3. Create more features by default feature set(3-days MA, 5-days MA, or some technical indicators...)  
+3. Create more features by default feature set (3-days MA, 5-days MA, or some technical indicators...)  
   
-## Definition  
+## Definition   
 **Parameters**  
 Using *window_len* days' historical features set to predict *pred_len* days later.  
 - *window_len*: append *windw_len* days' historical features set  
 - *pred_len*: predict the moving average(or close price) for *pred_len* days later  
-- *valid_len*: To do validation.  
+- *valid_len*: To do validation.   
 **Data frame**  
 - Divided time-series data into three parts: *df, df_valid, df_lately*  
   a). *df -> X, y* (with label, for train and test)  
@@ -52,14 +52,14 @@ Using *window_len* days' historical features set to predict *pred_len* days late
   
 ## LSTM model  
 *[samples, time steps, features] = [how_many_data_u_have, window_len, n_feature_set]*  
-*Be care of the return_sequences*
-** Regression**  
+*Be care of the return_sequences*   
+**Regression**  
 1. Build LSTM model with *input_dim = 5(ohlcv)*  
 2. Here I use two hidden layers *[120, 60]* with *dropout = 0.5*, *activation = 'relu'*  
 3. Output layer: *activation = 'linear'*  
 4. Loss = 'mse', *optimization = 'rmsprop'*  
   
-** Classification**  
+**Classification**  
 1. Build LSTM model with *input_dim = 5(ohlcv), output_dim = n_out_class*  
 2. Here I use two hidden layers *[120, 60]* with *dropout = 0.5*, *activation = 'relu'*  
 3. Output layer: *activation = 'softmax'*  
