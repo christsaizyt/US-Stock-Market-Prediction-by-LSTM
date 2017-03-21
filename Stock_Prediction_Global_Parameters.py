@@ -1,8 +1,3 @@
-
-# coding: utf-8
-
-# In[1]:
-
 import datetime
 
 class SP_Global_Paras(object):
@@ -159,14 +154,6 @@ class SP_Global_Paras(object):
     def n_features(self):
         return len(list(self.features))
 
-# g_paras = SP_Global_Paras('lstm')
-# print (g_paras.__str__())
-# print (g_paras.end_date)
-# print (g_paras.__str__())
-
-
-# In[2]:
-
 class SP_RNN_LSTM_Paras(SP_Global_Paras):
     
     def __init__(self, name, ticker):
@@ -230,12 +217,5 @@ class SP_RNN_LSTM_Paras(SP_Global_Paras):
     @model.setter
     def model(self, value):
         self._model = value
-
-# g_paras = SP_RNN_LSTM_Paras('lstm')
-# print (g_paras.__str__())
-
-
-# In[ ]:
-
 
 
