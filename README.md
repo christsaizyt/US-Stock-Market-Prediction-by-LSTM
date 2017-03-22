@@ -9,9 +9,9 @@ In this repo, I would like to share some of my works using LSTM to predict stock
   
 LSTM is a very great choice to handle with time-series data rather than traditional Recurrent Neural Network (RNN). In RNN, there is a so-called gradient vanishing/exploding problem, and the problem comes from updating the weights by only multiplications. To solve the problem, LSTM considers another way to updating the weights not only by multiplications but also by additions.  
   
-In my work, I used two ways to do the predictions. One is statefulness LSTM model and another one is stateful LSTM model. I'm still working on stateful LSTM model. I will update this part in the future.  
+In my work, I used two ways to do the predictions. One is stateless LSTM model and another one is stateful LSTM model. I'm still working on stateful LSTM model. I will update this part in the future.  
   
-# Statefulness LSTM model  
+# Stateless LSTM model  
 ## Input  
 1. Get data from quandl (wiki database)  
 2. Features set = \[*'Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume'*\] (default feature set)  
