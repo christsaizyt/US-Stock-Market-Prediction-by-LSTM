@@ -1,5 +1,5 @@
 import Stock_Prediction_Global_Parameters
-from Stock_Prediction_LSTM_Statefulness_Model import rnn_lstm_regression
+from Stock_Prediction_Stateless_LSTM_Model import rnn_lstm_regression
 
 paras = Stock_Prediction_Global_Parameters.SP_RNN_LSTM_Paras('lstm', 'NDAQ')
 
