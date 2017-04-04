@@ -9,7 +9,7 @@ paras.window_len = 120
 paras.pred_len = 10
 paras.valid_len = 20
 paras.out_type = 'MA'
-# paras.start_date = '2010-01-01'
+paras.start_date = '2010-01-01'
 # paras.end_date = 'current'
 
 paras.batch_size = 128
