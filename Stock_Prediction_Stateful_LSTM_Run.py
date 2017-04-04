@@ -14,14 +14,14 @@ def run_regression_script():
         paras = spgp.SP_RNN_LSTM_Paras('lstm', ticker)
         paras.save = True
         paras.features = 'ohlcv'
-        paras.window_len = 10#120
+        paras.window_len = 120
         paras.pred_len = 10
         paras.valid_len = 20
         paras.out_type = 'MA'
         paras.start_date = '2010-01-01'
         # paras.end_date = 'current'
         paras.batch_size = 1
-        paras.epoch = 1#300
+        paras.epoch = 300
         paras.model['hidden_layers'] = [120, 60, 30]
         paras.model['dropout'] = [0.3, 0.5, 0.3]
         paras.model['activation'] = ['relu', 'relu', 'relu']
@@ -42,8 +42,6 @@ def run_regression_script():
     #pd.set_option('display.max_rows', None)
 
 def run_classification_script():
-    # Classification Parameters
-    paras = spgm.load_lstm_parameters('g_paras_cla')
     pass
 
 #######################################################################################################################

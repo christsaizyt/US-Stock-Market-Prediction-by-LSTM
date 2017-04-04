@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ceaa54-cdb8-4fd9-9132-ac9b0d6ff0a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/lstm_model.h5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Stock_Prediction_General_Method.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Run.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/NDAQ_16.53_data_frame.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/parameters.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/training_curve_model.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stock_Prediction_Stateless_LSTM_Run.py" afterPath="$PROJECT_DIR$/Stock_Prediction_Stateless_LSTM_Run.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/NDAQ_16.53_data_frame.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/lstm_model.h5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/parameters.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/history/lstm_NDAQ_2017-04-03 16:09:35_120_10_ohlcv_2010-01-01_2017-04-03_[120, 60, 30]_[0.7, 0.5, 0.3]_['relu', 'relu', 'relu']/training_curve_model.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Run.py" afterPath="$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,8 +61,8 @@
       <file leaf-file-name="Stock_Prediction_Stateful_LSTM_Run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="90">
+              <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -75,8 +71,8 @@
       <file leaf-file-name="Stock_Prediction_Stateful_LSTM_Model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="357" column="0" lean-forward="true" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="256" column="53" lean-forward="true" selection-start-line="256" selection-start-column="53" selection-end-line="256" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -123,8 +119,8 @@
         <option value="$PROJECT_DIR$/Stock_Prediction_Statefulness_Run.py" />
         <option value="$PROJECT_DIR$/Stock_Prediction_Stateless_LSTM_Run.py" />
         <option value="$PROJECT_DIR$/Stock_Prediction_General_Method.py" />
-        <option value="$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Run.py" />
         <option value="$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Model.py" />
+        <option value="$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Run.py" />
       </list>
     </option>
   </component>
@@ -135,7 +131,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="21" />
+    <option name="x" value="22" />
     <option name="y" value="51" />
     <option name="width" value="1400" />
     <option name="height" value="778" />
@@ -476,7 +472,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="21" y="51" width="1400" height="778" extended-state="0" />
+    <frame x="22" y="51" width="1400" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2353362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -585,16 +581,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="34" column="62" lean-forward="true" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Stock_Prediction_Stateful_LSTM_Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="357" column="0" lean-forward="true" selection-start-line="357" selection-start-column="0" selection-end-line="357" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="256" column="53" lean-forward="true" selection-start-line="256" selection-start-column="53" selection-end-line="256" selection-end-column="53" />
           <folding />
         </state>
       </provider>
